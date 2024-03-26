@@ -28,6 +28,18 @@ INNER JOIN course_teacher on courses.id = course_teacher.course_id INNER JOIN te
 sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e
 nome
 
+
+SELECT degrees.*, students.name AS "nome studente", students.surname AS "cognome studente", departments.name AS"nome dipartimento"
+FROM students 
+INNER JOIN degrees
+ON students.degree_id = degrees.id
+INNER JOIN departments
+ ON departments.id = degrees.department_id
+ORDER BY students.name ASC, students.surname ASC;
+
+
+
+
 5. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
 
 6. Selezionare tutti i docenti che insegnano nel Dipartimento di
