@@ -12,7 +12,7 @@ Neuroscienze
 SELECT  degrees.level AS "TIPOLOGIA", departments.name AS"NOME DIPARTIMENTO", degrees.name AS "NOME CORSO"
 FROM degrees
 INNER JOIN departments
-ON departments.id = departments.id
+ON departments.id = degrees.departments_id
 WHERE departments.id= 7 
 AND degrees.level LIKE "%magistrale%"
 
